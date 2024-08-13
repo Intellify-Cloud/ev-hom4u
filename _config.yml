@@ -1,9 +1,9 @@
 baseurl: ""
 
-title      : evo Copestone - Bond Origination & Home Loans Expert in Cape Town
-email      : grant.butler@evogroup.co.za
-description: Contact Grant Butler from evo Copestone to help you with your home loan. We are seasoned property professionals and specialize in mortgages and property finance with years of experience. Our experience ranges from sales to finance and out focus is bonds, homeloans and origination. evo Copestone is committed to excellent client service, building long-term relationships.
-author     : Eben Roux / Pieter Oosthuizen
+title: Mortgage4U - Bond Origination & Home Loans Expert in Cape Town
+email: esme@mo4u.co.za
+description: Contact Esmé Le Roux from Mortgage4U to help you with your home loan. We are seasoned property professionals and specialize in mortgages and property finance with years of experience. Our experience ranges from sales to finance and out focus is bonds, homeloans and origination. Mortgage4U is committed to excellent client service, building long-term relationships.
+author: Eben Roux / Pieter Oosthuizen
 
 analytics:
   google: G-XXX
@@ -20,14 +20,14 @@ webserver_headers:
     - GET, OPTIONS, HEAD
 
 logo:
-  path: /assets/evo copestone logo.png
+  path: /assets/Mortgage4U logo.png
 
-exclude: [node_modules,webpack-config.js,package.json,package-lock.json]
+exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
 
 group: evo Home Loans
 
-company: evo Copestone 
+company: Mortgage4U
 
-url: https://evohomeloans.co.za/bond-originator/cape-town/evo-copestone/ 
+url: https://evohomeloans.co.za/bond-originator/cape-town/evo-copestone/
 
 address: 75 Starfish, Ocean Tides Residential Estate, Big Bay, Cape Town, 7441
