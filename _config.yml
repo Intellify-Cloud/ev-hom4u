@@ -1,9 +1,9 @@
 baseurl: ""
 
-title: Mortgage4U - Bond Origination & Home Loans Expert in Cape Town
-email: esme@mo4u.co.za
-description: Contact Esmé Le Roux from Mortgage4U to help you with your home loan. We are seasoned property professionals and specialize in mortgages and property finance with years of experience. Our experience ranges from sales to finance and out focus is bonds, homeloans and origination. Mortgage4U is committed to excellent client service, building long-term relationships.
-author: Eben Roux / Pieter Oosthuizen
+title      : Mortgage4U - Bond Origination & Home Loans Experts
+email      : grant.butler@evogroup.co.za
+description: Get expert help with your home loan from Esme le Roux at Mortgage4U. Our experienced team specializes in mortgages, property finance, and bond origination, providing top-notch service and personalized solutions. Contact us today for professional guidance and build a long-term relationship with seasoned property professionals.
+author     : Eben Roux / Pieter Oosthuizen
 
 analytics:
   google: G-XXX
@@ -20,14 +20,15 @@ webserver_headers:
     - GET, OPTIONS, HEAD
 
 logo:
-  path: /assets/Mortgage4U logo.png
+  path: /assets/mortage4u-logo.png
 
-exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
+
+exclude: [node_modules,webpack-config.js,package.json,package-lock.json]
 
 group: evo Home Loans
 
-company: Mortgage4U
+company: evo Copestone 
 
-url: https://evohomeloans.co.za/bond-originator/cape-town/evo-copestone/
+url: https://evohomeloans.co.za/bond-originator/cape-town/evo-copestone/ 
 
 address: 75 Starfish, Ocean Tides Residential Estate, Big Bay, Cape Town, 7441
