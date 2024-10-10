@@ -9,7 +9,19 @@
   min-width: 50px;
 }
 
+.textblock-section {
+  max-width: 800px;  // Limiting the width of the section
+  margin: 0 auto;    // Center the section horizontally
+  padding: 40px 0;   // Add vertical padding for spacing
+}
+
 .textblock-title {
   line-height: 2em;
   padding: 8px;
+}
+
+img {
+  max-width: 100%; // Ensure images are responsive
+  height: auto;
+  border-radius: 4px; // Slight rounding for images
 }
