@@ -3,16 +3,30 @@
  */
 
  #mainNav {
-  background-color: $gray-100;
+  background-color: rgba($surface, 0.96);
+  box-shadow: $elevation-1;
 
   .navbar-toggler {
+    min-height: 48px;
+    min-width: 48px;
     font-size: 12px;
     padding: 12px 16px;
     text-transform: uppercase;
-    color: white;
+    color: $white;
     border: 0;
     background-color: $primary;
+    border-radius: $radius-sm;
+    transition: background-color $motion-fast, box-shadow $motion-fast;
     @include heading-font;
+
+    &:focus {
+      outline: 0;
+      box-shadow: $focus-ring;
+    }
+
+    &:hover {
+      background-color: $brand-primary-dark;
+    }
   }
 
   .navbar-brand {
@@ -29,6 +43,7 @@
     > img {
       height: 60px;
       max-width: 100%;
+      transition: height $motion-standard;
     }
   }
 
@@ -37,14 +52,23 @@
       .nav-link {
         font-size: 16px;
         font-weight: bold;
-        padding: 1em 1.5em;
-        color: #000;
-        letter-spacing: 0.5px;
+        padding: 0.95rem 1.2rem;
+        color: $text-strong;
+        letter-spacing: 0;
+        border-radius: $radius-sm;
+        transition: background-color $motion-fast, color $motion-fast, box-shadow $motion-fast;
         @include heading-font;
 
         &.active,
         &:hover {
           color: $primary;
+          background-color: $brand-primary-soft;
+        }
+
+        &:focus {
+          outline: 0;
+          color: $primary;
+          box-shadow: $focus-ring;
         }
       }
     }
@@ -55,7 +79,7 @@
     padding-bottom: 1px;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba($surface, 0.94);
 
     .navbar-brand {
       font-size: 2em;
@@ -72,9 +96,10 @@
     }
 
     &.navbar-shrink {
-      background-color: #fff;
+      background-color: $surface;
       padding-top: 10px;
       padding-bottom: 10px;
+      box-shadow: $elevation-2;
 
       .navbar-brand {
         font-size: 1.75em;

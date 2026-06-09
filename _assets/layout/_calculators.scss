@@ -1,42 +1,66 @@
-// Styling for the services section
+// Styling for the calculators section
 .calculators-heading {
   margin: 15px 0;
   font-size: 24px;
   font-weight: 600;
 }
 
-#calculators .card {
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Example box shadow
-  border-radius: 10px;
-  padding-bottom: 15px;
-  transition: box-shadow 0.3s ease;
-  color: $primary;
-  &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.calculators-section {
+  background-color: $primary;
+
+  .section-heading,
+  .section-subheading {
+    color: $white;
+  }
+
+  .card-deck {
+    gap: 24px;
+  }
+
+  .card {
+    min-width: 0;
+    border: 0;
+    border-radius: $radius-md;
+    box-shadow: $elevation-1;
+    color: $text-strong;
+    overflow: hidden;
+    transition: box-shadow $motion-standard, transform $motion-standard;
+
+    &:hover,
+    &:focus-within {
+      box-shadow: $elevation-3;
+      transform: translateY(-4px);
+    }
+  }
+
+  .card-body {
+    padding: 2rem 1.5rem 1.25rem;
+  }
+
+  .card-title {
+    color: $text-strong;
+  }
+
+  .card-footer {
+    border: 0;
+    background: $surface;
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  .fa-stack {
+    margin-bottom: 0.5rem;
+  }
+
+  .btn {
+    margin-bottom: 0;
+    white-space: normal;
   }
 }
 
-#calculators .card .card-footer {
-  border: none;
-  background: $white;
-}
-
-#calculators .btn {
-  border-radius: 30px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  color: $white;
-  
-  &:hover {
-    background-color: $primary; // Example hover color
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    transform: translateY(1px);
+@media (max-width: 767px) {
+  .calculators-section {
+    .card {
+      margin-bottom: 1.5rem;
+    }
   }
 }

@@ -3,6 +3,7 @@ body {
   overflow-x: hidden;
   @include body-font;
   background-color: #fbf9f6;
+  color: $text-strong;
 }
 
 p {
@@ -11,8 +12,14 @@ p {
 
 a {
   color: $primary;
+  transition: color $motion-fast, box-shadow $motion-fast;
   &:hover {
     color: darken($primary, 10%);
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: $focus-ring;
   }
 }
 
@@ -33,7 +40,7 @@ h6 {
 }
 
 .page-section {
-  padding: 80px 80px;
+  padding: 80px 24px;
   h2.section-heading {
     font-size: 40px;
     margin-top: 0;
@@ -61,6 +68,22 @@ h6 {
 @media(min-width:768px) {
   section {
     padding: 100px 0;
+  }
+
+  .page-section {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

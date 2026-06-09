@@ -11,3 +11,33 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 
+$brand-primary: $primary !default;
+$brand-primary-dark: darken($brand-primary, 10%) !default;
+$brand-primary-soft: rgba($brand-primary, 0.12) !default;
+$surface: #ffffff !default;
+$surface-muted: #f6f8f9 !default;
+$text-strong: #172126 !default;
+$text-muted: #5d6970 !default;
+
+$radius-sm: 6px !default;
+$radius-md: 10px !default;
+$radius-lg: 18px !default;
+$focus-ring: 0 0 0 0.2rem rgba($brand-primary, 0.28) !default;
+$elevation-1: 0 4px 14px rgba(23, 33, 38, 0.08) !default;
+$elevation-2: 0 10px 28px rgba(23, 33, 38, 0.14) !default;
+$elevation-3: 0 16px 40px rgba(23, 33, 38, 0.18) !default;
+$motion-fast: 160ms ease !default;
+$motion-standard: 240ms ease !default;
+
+:root {
+  --brand-primary: #{$brand-primary};
+  --brand-primary-dark: #{$brand-primary-dark};
+  --surface: #{$surface};
+  --surface-muted: #{$surface-muted};
+  --text-strong: #{$text-strong};
+  --text-muted: #{$text-muted};
+  --radius-sm: #{$radius-sm};
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+}
+

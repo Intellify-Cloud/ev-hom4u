@@ -7,12 +7,13 @@
 
 #services .card {
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Example box shadow
-  border-radius: 10px;
-  transition: box-shadow 0.3s ease;
+  box-shadow: $elevation-1;
+  border-radius: $radius-md;
+  transition: box-shadow $motion-standard, transform $motion-standard;
   color: $primary;
   &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: $elevation-2;
+    transform: translateY(-3px);
   }
 }
 
@@ -27,11 +28,9 @@
   font-weight: 500;
   text-transform: uppercase;
   padding: 10px 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
   color: $white;
   
   &:hover {
-    background-color: $primary; // Example hover color
     transform: translateY(-2px);
   }
 
