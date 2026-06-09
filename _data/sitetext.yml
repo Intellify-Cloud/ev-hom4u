@@ -36,6 +36,7 @@ articles:
   title: "Articles"
   text: "Here is a list of our articles that can help inform you about news in homeloans, interest rates and the South African property market."
   section: articles
+  read_more: "Read more"
 
 calculators:
   title: "Home Loan Calculators"
@@ -194,7 +195,12 @@ testimonials:
 
 contact:
   title: "Contact Us"
-  text: "Send a message or reach Esme directly."
+  page_title: "Contact Mortgage4U"
+  text: "Reach Esme directly by phone, email, or WhatsApp."
+  details_title: "Speak to Us"
+  details_label: "Contact details"
+  hours_label: "Office hours"
+  note: "Use any of the options above and Esme will help you with pre-qualification, bond applications, and bank feedback."
   section: contact
   methods:
     - title: "Phone"
@@ -209,9 +215,18 @@ contact:
       text: "Chat on WhatsApp"
       url: https://api.whatsapp.com/send?phone=27845476711
       icon: fab fa-whatsapp
+  faq:
+    - question: "How do I contact Mortgage4U?"
+      answer: "Contact EsmÃ© Le Roux by phone at 084 547 6711, email at esme@mo4u.co.za, or WhatsApp. We're available Monday to Friday 08:00-17:00 and Saturdays by appointment."
+    - question: "Do I pay for bond origination services?"
+      answer: "No, our services are completely free to you as the client. We are paid by the banks once your bond is approved."
 
 footer:
+  copyright_prefix: "Copyright"
   legal: "Powered by evo Home Loans"
+  privacy: "Privacy Statement"
+  data_sharing: "Data Sharing"
+  social_label: "Social link"
   social:
     # - url: https://twitter.com
     #   icon: "fab fa-twitter"

@@ -219,7 +219,7 @@ Add to verify with search consoles:
 1. **Done**: Add robots.txt and sitemap.xml
 2. **Done**: Add JSON-LD organization schema with ZA region specifics
 3. **Done**: Add page-specific meta descriptions for calculators
-4. **Medium**: Add FAQ structured data to calculator pages
+4. **Done**: Add FAQ structured data to calculator pages and contact page
 5. **Medium**: Add semantic HTML attributes (lang, schema types)
 6. **Low**: Optimize Open Graph images per section
 
@@ -230,8 +230,13 @@ Add to verify with search consoles:
 - `_config.yml` - Added jekyll-sitemap plugin
 - `Gemfile` - Added jekyll-sitemap gem
 - `_layouts/default.html` - Added `lang="en-ZA"` attribute
-- `_includes/head.html` - Added JSON-LD FinancialService schema, page-specific description handling, preconnect to fonts
-- All calculator markdown files - Added unique descriptions per page
+- `_includes/head.html` - Added JSON-LD FinancialService schema, page-specific description handling, preconnect to fonts, FAQ schema for homepage
+- `affordability-calculator.md` - Added description and FAQ schema
+- `bond-calculator.md` - Added description, FAQ schema, loading="lazy" on iframe
+- `deposit-savings-calculator.md` - Added FAQ schema and loading="lazy" on iframe
+- `transfer-cost-calculator.md` - Added FAQ schema and loading="lazy" on iframe
+- `amortisation-calculator.md` - Added FAQ schema and loading="lazy" on iframe
+- `contact.md` - Added FAQ schema
 
 ## Expected SEO Impact
 

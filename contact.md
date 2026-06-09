@@ -1,23 +1,23 @@
 ---
 layout: page
 title: Contact Mortgage4U
-description: "Contact EsmÃ© Le Roux for expert home loan advice. Get pre-approved today for your bond application with personalized mortgage solutions."
+description: "Contact EsmÃƒÂ© Le Roux for expert home loan advice. Get pre-approved today for your bond application with personalized mortgage solutions."
 background: muted
 ---
 
 <div id="contact" class="contact-page">
   <div class="row">
     <div class="col-lg-12 text-center">
-      <h1 class="section-heading text-uppercase">Contact Mortgage4U</h1>
-      <p class="section-subheading text-muted">Reach Esme directly by phone, email, or WhatsApp.</p>
+      <h1 class="section-heading text-uppercase">{{ site.data.sitetext.contact.page_title | default: site.data.sitetext.contact.title }}</h1>
+      <p class="section-subheading text-muted">{{ site.data.sitetext.contact.text }}</p>
     </div>
   </div>
 
   <div class="contact-inner">
-    <aside class="contact-details-card" aria-label="Contact details">
+    <aside class="contact-details-card" aria-label="{{ site.data.sitetext.contact.details_label | default: 'Contact details' }}">
       <div class="contact-details-header">
         <i class="far fa-address-card contact-details-icon" aria-hidden="true"></i>
-        <h2 class="contact-details-title">Speak to Us</h2>
+        <h2 class="contact-details-title">{{ site.data.sitetext.contact.details_title }}</h2>
       </div>
 
       <div class="contact-methods">
@@ -33,10 +33,10 @@ background: muted
         </a>
         {% endfor %}
       </div>
-      <p class="contact-details-note">Use any of the options above and Esme will help you with pre-qualification, bond applications, and bank feedback.</p>
+      <p class="contact-details-note">{{ site.data.sitetext.contact.note }}</p>
     </aside>
 
-    <aside class="team-hours-card contact-hours-card" aria-label="Office hours">
+    <aside class="team-hours-card contact-hours-card" aria-label="{{ site.data.sitetext.contact.hours_label | default: 'Office hours' }}">
       <div class="team-hours-header">
         <i class="far fa-clock team-hours-icon" aria-hidden="true"></i>
         <h2 class="team-hours-title">{{ site.data.sitetext.team.hours.title | default: "Office Hours" }}</h2>
@@ -49,7 +49,7 @@ background: muted
       </div>
 
       {% if site.data.sitetext.team.hours.note %}
-      <div class="team-hours-note">
+      <div class="contact-hours-note">
         <i class="fas fa-info-circle" aria-hidden="true"></i>
         <span>{{ site.data.sitetext.team.hours.note }}</span>
       </div>
@@ -57,3 +57,24 @@ background: muted
     </aside>
   </div>
 </div>
+
+{% if site.data.sitetext.contact.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in site.data.sitetext.contact.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.answer | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
