@@ -3,7 +3,7 @@
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         {%- if site.logo -%}
-        <img src="{{ site.baseurl }}{{ site.logo.path }}" />
+        <img src="{{ site.logo.path | relative_url }}" />
         {%- else -%}
         {{ site.title }}
         {%- endif -%}
@@ -27,7 +27,6 @@
             {%- endif -%}
           </li>
           {% endfor %}
-          </li>
         </ul>
       </div>
     </div>

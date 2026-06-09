@@ -1,12 +1,15 @@
 <head>
-{% if site.analytics.google %}
+{% assign google_analytics_id = site.analytics.google | default: "" | strip %}
+{% if google_analytics_id == "" %}
+{% elsif google_analytics_id == "G-XXX" %}
+{% else %}
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ google_analytics_id }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-		gtag('config', '{{ site.analytics.google }}');
+		gtag('config', '{{ google_analytics_id }}');
   </script>
 <!-- End Google Analytics -->
 
@@ -20,21 +23,21 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.baseurl }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:title" content="{{ site.title }}">
   <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:image" content="{{ site.baseurl }}/social_916x509.jpg">
+  <meta property="og:image" content="{{ "/social_916x509.jpg" | absolute_url }}">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="{{ site.baseurl }}">
+  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
   <meta property="twitter:title" content="{{ site.title }}">
   <meta property="twitter:description" content="{{ site.description }}">
-  <meta property="twitter:image" content="{{ site.baseurl }}/social_916x509.jpg">
+  <meta property="twitter:image" content="{{ "/social_916x509.jpg" | absolute_url }}">
 
 
   <meta name="author" content="{{ site.author }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
   <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
