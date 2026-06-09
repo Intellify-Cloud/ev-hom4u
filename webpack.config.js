@@ -44,16 +44,25 @@ module.exports = {
                         limit: 10000,
                         mimetype: 'application/font-woff',
                         fallback: 'file-loader',
-                        name: '[name].[ext]'
+                        name: 'fonts/[name].[ext]'
                     }
                 }
             },
             {
-                test: /\.(ttf|eot|svg|jpg|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: '[name].[ext]'
+                        name: 'fonts/[name].[ext]'
+                    }
+                }
+            },
+            {
+                test: /\.(jpg|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: 'img/[name].[ext]'
                     }
                 }
             }

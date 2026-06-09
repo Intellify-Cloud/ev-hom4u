@@ -20,7 +20,7 @@
       {% for service in site.data.sitetext.calculators.list %}
       <div class="card">
         <div class="card-body text-center">
-          <span class="fa-stack fa-3x">
+          <span class="fa-stack fa-3x" aria-hidden="true">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="{{ service.icon | default: "fas fa-calculator" }} fa-stack-1x fa-inverse"></i>
           </span>

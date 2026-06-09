@@ -109,7 +109,15 @@
     width: 75px;
     height: 75px;
     cursor: pointer;
+    border: 0;
     background-color: transparent;
+    padding: 0;
+
+    &:focus-visible {
+      outline: 0;
+      box-shadow: $focus-ring;
+    }
+
     &:hover {
       opacity: 0.3;
     }

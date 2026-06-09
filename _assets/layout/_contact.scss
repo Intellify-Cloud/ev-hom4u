@@ -1,55 +1,163 @@
 // Styling for the contact section
-section#contact {
-  background-color: $gray-900;
-  background-image: url("#{$contact-image}");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+#contact {
+  background-color: $surface-muted;
+
   .section-heading {
-    color: $white;
-  }
-  .form-group {
-    margin-bottom: 25px;
-    input,
-    textarea {
-      padding: 20px;
-      border: 2px solid transparent;
-      border-radius: $radius-sm;
-      transition: border-color $motion-fast, box-shadow $motion-fast;
-    }
-    input.form-control {
-      height: auto;
-    }
-    textarea.form-control {
-      height: 248px;
-    }
-  }
-  .form-control:focus {
-    border-color: $primary;
-    box-shadow: $focus-ring;
-  }
-  ::-webkit-input-placeholder {
-    font-weight: 700;
-    color: $gray-400;
-    @include heading-font;
-  }
-  :-moz-placeholder {
-    font-weight: 700;
-    color: $gray-400;
-    @include heading-font;
-  }
-  ::-moz-placeholder {
-    font-weight: 700;
-    color: $gray-400;
-    @include heading-font;
-  }
-  :-ms-input-placeholder {
-    font-weight: 700;
-    color: $gray-400;
-    @include heading-font;
+    color: $text-strong;
   }
 }
 
+.contact-inner {
+  align-items: stretch;
+  display: flex;
+  gap: $space-4;
+  margin: 0 auto;
+  max-width: 1040px;
+}
+
+.contact-inner--compact {
+  justify-content: center;
+}
+
+.contact-page {
+  padding: $space-5 0;
+
+  .section-subheading {
+    line-height: $line-height-body;
+    margin: 0 auto $space-4;
+    max-width: $content-measure;
+  }
+}
+
+.contact-details-card,
+.contact-form-card {
+  background: $surface;
+  border: 1px solid rgba($gray-300, 0.35);
+  border-radius: $radius-lg;
+  box-shadow: $elevation-1;
+  transition: box-shadow $motion-standard, transform $motion-standard;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: $elevation-2;
+  }
+}
+
+.contact-details-card {
+  flex: 0 0 360px;
+  max-width: 360px;
+  padding: $space-4;
+}
+
+.contact-hours-card {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-details-card--wide {
+  flex-basis: 640px;
+  max-width: 640px;
+}
+
+.contact-details-header {
+  align-items: center;
+  display: flex;
+  gap: $space-2;
+  margin-bottom: $space-4;
+}
+
+.contact-details-icon {
+  color: $primary;
+  font-size: 1.75rem;
+}
+
+.contact-details-title {
+  color: $text-strong;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: $line-height-heading;
+  margin: 0;
+  text-transform: none;
+}
+
+.contact-methods {
+  display: grid;
+  gap: $space-2;
+}
+
+.contact-details-note {
+  border-top: 1px solid rgba($gray-300, 0.45);
+  color: $gray-600;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: $line-height-body;
+  margin: $space-4 0 0;
+  padding-top: $space-3;
+}
+
+.contact-method {
+  align-items: center;
+  border-radius: $radius-md;
+  color: $text-strong;
+  display: flex;
+  gap: $space-2;
+  padding: $space-2;
+  transition: background-color $motion-fast, box-shadow $motion-fast, color $motion-fast, transform $motion-fast;
+
+  &:hover,
+  &:focus-visible {
+    background: $brand-primary-soft;
+    box-shadow: $elevation-1;
+    color: $text-strong;
+    outline: 0;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  strong,
+  span span {
+    display: block;
+  }
+
+  strong {
+    color: $text-strong;
+    font-size: 0.9rem;
+    line-height: $line-height-heading;
+  }
+
+  span span {
+    color: $gray-600;
+    font-size: 0.9rem;
+    line-height: $line-height-body;
+  }
+}
+
+.contact-method-icon {
+  align-items: center;
+  background: $brand-primary-soft;
+  border-radius: $radius-sm;
+  color: $primary;
+  display: inline-flex;
+  flex: 0 0 46px;
+  font-size: 1.1rem;
+  height: 46px;
+  justify-content: center;
+  width: 46px;
+}
+
 .contact-us p {
-  margin-bottom: .25em;
+  margin-bottom: 0.25em;
+}
+
+@media (max-width: 780px) {
+  .contact-inner {
+    flex-direction: column;
+    gap: $space-3;
+  }
+
+  .contact-details-card {
+    flex: none;
+    max-width: 100%;
+  }
+
 }

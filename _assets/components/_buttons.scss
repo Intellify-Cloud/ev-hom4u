@@ -13,7 +13,7 @@
   min-height: 48px;
   transition: background-color $motion-fast, border-color $motion-fast, box-shadow $motion-fast, color $motion-fast, transform $motion-fast;
 
-  &:focus {
+  &:focus-visible {
     outline: 0;
     box-shadow: $focus-ring;
   }
@@ -58,6 +58,6 @@
   }
 
   &:active {
-    transform: scale(0.95);
+    transform: translateY(0);
   }
 }

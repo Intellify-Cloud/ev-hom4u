@@ -10,13 +10,13 @@
     <div class="row">
 	{% for project in site.portfolio %}
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#p{{ forloop.index }}">
+        <a class="portfolio-link" data-toggle="modal" href="#p{{ forloop.index }}" aria-label="View {{ project.caption.title | default: project.title }}">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="{{ site.data.style.portfolio-icon | default: "fas fa-plus fa-3x" }}"></i>
+              <i class="{{ site.data.style.portfolio-icon | default: "fas fa-plus fa-3x" }}" aria-hidden="true"></i>
             </div>
           </div>
-          <img class="img-fluid" src="{{ project.caption.thumbnail }}" alt="">
+          <img class="img-fluid" src="{{ project.caption.thumbnail | relative_url }}" alt="{{ project.caption.alt | default: project.caption.title | default: project.title }}" loading="lazy">
         </a>
         <div class="portfolio-caption">
           <h4>{{ project.caption.title }}</h4>

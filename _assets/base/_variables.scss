@@ -29,6 +29,20 @@ $elevation-3: 0 16px 40px rgba(23, 33, 38, 0.18) !default;
 $motion-fast: 160ms ease !default;
 $motion-standard: 240ms ease !default;
 
+$phi: 1.618 !default;
+$space-1: 0.618rem !default;
+$space-2: 1rem !default;
+$space-3: 1.618rem !default;
+$space-4: 2.618rem !default;
+$space-5: 4.236rem !default;
+$space-6: 6.854rem !default;
+$line-height-body: 1.618 !default;
+$line-height-heading: 1.236 !default;
+$line-height-tight: 1.145 !default;
+$section-padding-y-mobile: $space-5 !default;
+$section-padding-y-desktop: $space-6 !default;
+$content-measure: 68ch !default;
+
 :root {
   --brand-primary: #{$brand-primary};
   --brand-primary-dark: #{$brand-primary-dark};
@@ -39,5 +53,11 @@ $motion-standard: 240ms ease !default;
   --radius-sm: #{$radius-sm};
   --radius-md: #{$radius-md};
   --radius-lg: #{$radius-lg};
+  --space-1: #{$space-1};
+  --space-2: #{$space-2};
+  --space-3: #{$space-3};
+  --space-4: #{$space-4};
+  --space-5: #{$space-5};
+  --space-6: #{$space-6};
 }
 

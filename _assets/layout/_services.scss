@@ -1,33 +1,51 @@
 // Styling for the services section
 .service-heading {
-  margin: 15px 0;
+  margin: $space-3 0 $space-2;
   font-size: 24px;
   font-weight: 600;
+  line-height: $line-height-heading;
+}
+
+.services-section {
+  background-color: $surface-muted;
+}
+
+.services {
+  gap: $space-3;
 }
 
 #services .card {
   border: none;
   box-shadow: $elevation-1;
   border-radius: $radius-md;
+  overflow: hidden;
   transition: box-shadow $motion-standard, transform $motion-standard;
-  color: $primary;
+  color: $text-strong;
+
   &:hover {
+    box-shadow: $elevation-2;
+    transform: translateY(-3px);
+  }
+
+  &:focus-within {
     box-shadow: $elevation-2;
     transform: translateY(-3px);
   }
 }
 
+#services .card .card-body {
+  padding: $space-4 $space-3 $space-3;
+}
+
 #services .card .card-footer {
   border: none;
-  background: $white;
+  background: $surface;
+  padding: 0 $space-3 $space-3;
 }
 
 #services .btn {
-  border-radius: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   font-weight: 500;
-  text-transform: uppercase;
-  padding: 10px 20px;
   color: $white;
   
   &:hover {
@@ -36,5 +54,11 @@
 
   &:active {
     transform: translateY(1px);
+  }
+}
+
+@media (max-width: 767px) {
+  #services .card {
+    margin-bottom: $space-3;
   }
 }

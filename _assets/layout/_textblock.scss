@@ -1,8 +1,9 @@
 // Styling for the services section
 .textblock-heading {
-    margin: 5px 0;
+    margin: $space-1 0;
     text-transform: none;
     color: #01acc8;
+    line-height: $line-height-heading;
 }
 
 .textblock-image {
@@ -10,14 +11,17 @@
 }
 
 .textblock-section {
-  max-width: 800px;  // Limiting the width of the section
-  margin: 0 auto;    // Center the section horizontally
-  padding: 40px 0;   // Add vertical padding for spacing
+  background-color: $white;
+  padding: $space-4 0;
+
+  > .container {
+    max-width: 800px;
+  }
 }
 
 .textblock-title {
-  line-height: 2em;
-  padding: 8px;
+  line-height: $line-height-body;
+  padding: $space-1;
 }
 
 img {

@@ -148,15 +148,31 @@ team:
   # subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
   section: team
   contact:
+  hours:
+    title: "Office Hours"
+    list:
+      - "Monday - Friday: 08:00 - 17:00"
+      - "Saturday: By appointment"
+      - "Sunday: Closed"
+    note: "Appointments outside office hours can be arranged when needed."
   people:
     - name: "Esmé Le Roux"
       role: "Director & Senior Mortgage Originator  "
+      bio: "Personal guidance from pre-qualification through to bank submission, negotiation, and final bond approval."
       image: assets/img/team/400x400_f1.jpg
       social:
         - url: tel:084 547 6711
           icon: fas fa-phone
+          title: Phone
         - url: mailto:esme@mo4u.co.za?subject=Mortgage4U Website Enquiry
           icon: fas fa-envelope
+          title: Email
+        - url: https://api.whatsapp.com/send?phone=27845476711
+          icon: fab fa-whatsapp
+          title: WhatsApp
+        - url: "#contact"
+          icon: fas fa-address-card
+          title: Contact Form
         # - url: https://www.facebook.com/xxx
         #   icon: fab fa-facebook-f
         # - url: https://www.linkedin.com/in/bondapply
@@ -178,8 +194,21 @@ testimonials:
 
 contact:
   title: "Contact Us"
-  text: ""
-  section: team
+  text: "Send a message or reach Esme directly."
+  section: contact
+  methods:
+    - title: "Phone"
+      text: "084 547 6711"
+      url: tel:+27845476711
+      icon: fas fa-phone
+    - title: "Email"
+      text: "esme@mo4u.co.za"
+      url: mailto:esme@mo4u.co.za?subject=Mortgage4U Website Enquiry
+      icon: fas fa-envelope
+    - title: "WhatsApp"
+      text: "Chat on WhatsApp"
+      url: https://api.whatsapp.com/send?phone=27845476711
+      icon: fab fa-whatsapp
 
 footer:
   legal: "Powered by evo Home Loans"

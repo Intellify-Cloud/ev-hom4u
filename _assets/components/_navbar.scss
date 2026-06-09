@@ -19,7 +19,7 @@
     transition: background-color $motion-fast, box-shadow $motion-fast;
     @include heading-font;
 
-    &:focus {
+    &:focus-visible {
       outline: 0;
       box-shadow: $focus-ring;
     }
@@ -65,7 +65,7 @@
           background-color: $brand-primary-soft;
         }
 
-        &:focus {
+        &:focus-visible {
           outline: 0;
           color: $primary;
           box-shadow: $focus-ring;

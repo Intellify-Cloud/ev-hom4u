@@ -5,6 +5,9 @@ email      : grant.butler@evogroup.co.za
 description: Get expert help with your home loan from Esme le Roux at Mortgage4U. Our experienced team specializes in mortgages, property finance, and bond origination, providing top-notch service and personalized solutions. Contact us today for professional guidance and build a long-term relationship with seasoned property professionals.
 author     : Eben Roux / Pieter Oosthuizen
 
+plugins:
+  - jekyll-sitemap
+
 collections:
   portfolio:
 
